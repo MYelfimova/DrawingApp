@@ -73,7 +73,7 @@
                 <splitViewController id="hbd-bu-028" sceneMemberID="viewController">
                     <connections>
                         <segue destination="zRe-VD-1CP" kind="relationship" relationship="masterViewController" id="pYm-Sq-pMm"/>
-                        <segue destination="BYZ-38-t0r" kind="showDetail" id="MBn-UN-bnq"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="detailViewController" id="SmC-02-7gM"/>
                     </connections>
                 </splitViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CHg-9Y-4hw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -85,23 +85,24 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="EmojiArtViewController" customModule="DrawingApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="712" height="728"/>
+                        <rect key="frame" x="0.0" y="0.0" width="703.5" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m5H-cc-lNX">
-                                <rect key="frame" x="0.0" y="0.0" width="712" height="728"/>
+                                <rect key="frame" x="0.0" y="0.0" width="703.5" height="768"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FVM-RE-4kW" customClass="EmojiArtView" customModule="DrawingApp" customModuleProvider="target">
+                                    <scrollView verifyAmbiguity="off" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" placeholderIntrinsicWidth="712" placeholderIntrinsicHeight="728" translatesAutoresizingMaskIntoConstraints="NO" id="ip9-tF-ilm">
                                         <rect key="frame" x="0.0" y="0.0" width="712" height="728"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                    </view>
+                                        <viewLayoutGuide key="contentLayoutGuide" id="wE6-wr-NwV"/>
+                                        <viewLayoutGuide key="frameLayoutGuide" id="6U1-9G-g83"/>
+                                    </scrollView>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="FVM-RE-4kW" secondAttribute="trailing" id="7aa-Jy-X5l"/>
-                                    <constraint firstAttribute="bottom" secondItem="FVM-RE-4kW" secondAttribute="bottom" id="R0g-1W-VFz"/>
-                                    <constraint firstItem="FVM-RE-4kW" firstAttribute="leading" secondItem="m5H-cc-lNX" secondAttribute="leading" id="gKq-Qh-ccm"/>
-                                    <constraint firstItem="FVM-RE-4kW" firstAttribute="top" secondItem="m5H-cc-lNX" secondAttribute="top" id="s7C-M8-pKE"/>
+                                    <constraint firstItem="ip9-tF-ilm" firstAttribute="leading" secondItem="m5H-cc-lNX" secondAttribute="leading" id="2hH-O8-Tog"/>
+                                    <constraint firstItem="ip9-tF-ilm" firstAttribute="top" secondItem="m5H-cc-lNX" secondAttribute="top" id="3JJ-cf-Jkf"/>
+                                    <constraint firstAttribute="trailing" secondItem="ip9-tF-ilm" secondAttribute="trailing" id="sld-hD-M7s"/>
+                                    <constraint firstAttribute="bottom" secondItem="ip9-tF-ilm" secondAttribute="bottom" id="z9n-Zq-Vme"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -115,13 +116,13 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="dropZone" destination="m5H-cc-lNX" id="M13-4b-mAK"/>
-                        <outlet property="emojiArtView" destination="FVM-RE-4kW" id="Z7L-Dh-Pjt"/>
+                        <outlet property="dropZone" destination="m5H-cc-lNX" id="2dR-tx-oOG"/>
+                        <outlet property="scrollView" destination="ip9-tF-ilm" id="Pa2-kq-7na"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-445" y="141"/>
+            <point key="canvasLocation" x="-445.31249999999994" y="140.625"/>
         </scene>
     </scenes>
 </document>
